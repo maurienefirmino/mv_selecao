@@ -1,19 +1,14 @@
 package com.selecao.selecao.models;
 
-import java.util.HashSet;
-import java.util.Set;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+
 
 @Entity
+@Table(name="profissional")
 public class Profissional {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -23,16 +18,7 @@ public class Profissional {
 	private String telefone_celular;
 	private String telefone_residencial;
 	private int funcao;
-	
-	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
-    @JoinTable(name = "vinculos",
-            joinColumns = {
-                    @JoinColumn(name = "id_profissional", referencedColumnName = "id",
-                            nullable = false, updatable = false)},
-            inverseJoinColumns = {
-                    @JoinColumn(name = "id_estabelecimento", referencedColumnName = "id",
-                            nullable = false, updatable = false)})
-    private Set<Estabelecimento> estabelecimentos = new HashSet<>();
+
 	
 	public Long getId() {
 		return id;

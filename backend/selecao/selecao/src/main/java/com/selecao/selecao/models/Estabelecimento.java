@@ -1,16 +1,13 @@
 package com.selecao.selecao.models;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="estabelecimento")
 public class Estabelecimento {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -19,8 +16,6 @@ public class Estabelecimento {
 	private String endereco;
 	private String telefone;
 	
-	@ManyToMany(mappedBy = "vinculos", fetch = FetchType.LAZY)
-    private Set<Profissional> profissionais = new HashSet<>();
 	
 	public Long getId() {
 		return id;

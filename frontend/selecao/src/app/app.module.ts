@@ -23,9 +23,9 @@ import { FormestabelecimentoComponent } from './views/home/menu/estabelecimento/
 import { EditestabelecimentoComponent } from './views/home/menu/estabelecimento/editestabelecimento/editestabelecimento.component';
 import { HeaderComponent } from './views/home/menu/header/header.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
-
-
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -55,7 +55,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatTableModule,
     FormsModule,
     ReactiveFormsModule,
-    MatFormFieldModule
+    MatInputModule,
+    MatFormFieldModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

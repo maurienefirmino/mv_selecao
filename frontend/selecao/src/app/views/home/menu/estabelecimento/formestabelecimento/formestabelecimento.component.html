@@ -1,19 +1,31 @@
 <app-header></app-header>
 
-<form [formGroup]="estabelecimentoForm">
-    <mat-form-field>
-        <mat-label>Nome</mat-label>
-        <input matInput formControlName="nome" name="nome">
-    </mat-form-field>
-    <mat-form-field>
-        <mat-label>Endereço</mat-label>
-        <input matInput formControlName="endereco" name="endereco">
-    </mat-form-field>
-    <mat-form-field>
-        <mat-label>Telefone</mat-label>
-        <input matInput formControlName="telefone" name="telefone">
-    </mat-form-field>
-</form>
+<mat-grid-list cols="1" rowHeight="4:1">
+    <mat-grid-tile>
+  
+        <form [formGroup]="estabelecimentoForm">
+            <br><br>
+            <h3>Formulário de Estabelecimento</h3>
+            <mat-form-field>
+                <mat-label>Nome</mat-label>
+                <input matInput formControlName="nome" name="nome">
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <mat-label>Endereço</mat-label>
+                <input matInput formControlName="endereco" name="endereco">
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <mat-label>Telefone</mat-label>
+                <input matInput formControlName="telefone" name="telefone">
+            </mat-form-field>
+            <br>
+            <a href="/estabelecimento"><button mat-raised-button color="warn" type="button">Voltar</button></a>
+            <button mat-raised-button (click)="storeEstabelecimento()" color="primary">Salvar</button>
+        </form>
+    </mat-grid-tile>
+</mat-grid-list>
 
-<a href="/estabelecimento"><button mat-button>Voltar</button></a>
-<button mat-button (click)="storeEstabelecimento()">Salvar</button>
+
+

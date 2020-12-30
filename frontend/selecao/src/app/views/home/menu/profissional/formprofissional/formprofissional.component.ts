@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ProfissionalService } from 'src/app/shared/service/profissional.service';
 
 @Component({
@@ -13,7 +14,8 @@ export class FormprofissionalComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private profissionalService: ProfissionalService
+    private profissionalService: ProfissionalService,
+    private route:Router
   ) { }
 
   ngOnInit(): void {
@@ -27,7 +29,9 @@ export class FormprofissionalComponent implements OnInit {
   }
 
   storeProfissional(){
-    this.profissionalService.postData(this.profissionalForm.value).subscribe(result=>{});
+    this.profissionalService.postData(this.profissionalForm.value).subscribe(result=>{
+      this.route.navigate(['/profissional']);
+    });
   }
 
 }

@@ -27,4 +27,8 @@ export class VinculoService {
   public postData(vinculo:any): Observable<Vinculo>{
     return this.httpClient.post<any>(this.apiUrl, vinculo, this.HttpOptions);
   }
+
+  public delete(id:number){
+    return this.httpClient.delete(this.apiUrl+"/"+id+"/delete");
+  }
 }

@@ -1,28 +1,40 @@
 <app-header></app-header>
 
+<mat-grid-list cols="1" rowHeight="3:1">
+  <mat-grid-tile>
+    <form [formGroup]="profissionalForm">
+        <br><br>
+            <h3>Formulário de Profissional</h3>
+        <mat-form-field>
+            <mat-label>Nome</mat-label>
+            <input matInput formControlName="nome" name="nome">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Endereço</mat-label>
+            <input matInput formControlName="endereco" name="endereco">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Telefone Celular</mat-label>
+            <input matInput formControlName="telefone_celular" name="telefone_celular">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Telefone Residencial</mat-label>
+            <input matInput formControlName="telefone_residencial" name="telefone_residencial">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Função</mat-label>
+            <input matInput formControlName="funcao" name="funcao">
+        </mat-form-field>
+        <br>
+        <a href="/profissional"><button mat-raised-button  type="button" color="warn">Voltar</button></a>
+        <button mat-raised-button  (click)="storeProfissional()" color="primary">Salvar</button>
+    </form>
+    
+  </mat-grid-tile>
+</mat-grid-list>
 
-<form [formGroup]="profissionalForm">
-    <mat-form-field>
-        <mat-label>Nome</mat-label>
-        <input matInput formControlName="nome" name="nome">
-    </mat-form-field>
-    <mat-form-field>
-        <mat-label>Endereço</mat-label>
-        <input matInput formControlName="endereco" name="endereco">
-    </mat-form-field>
-    <mat-form-field>
-        <mat-label>Telefone Celular</mat-label>
-        <input matInput formControlName="telefone_celular" name="telefone_celular">
-    </mat-form-field>
-    <mat-form-field>
-        <mat-label>Telefone Residencial</mat-label>
-        <input matInput formControlName="telefone_residencial" name="telefone_residencial">
-    </mat-form-field>
-    <mat-form-field>
-        <mat-label>Função</mat-label>
-        <input matInput formControlName="funcao" name="funcao">
-    </mat-form-field>
-</form>
 
-<a href="/profissional"><button mat-button>Voltar</button></a>
-<button mat-button (click)="storeProfissional()">Salvar</button>

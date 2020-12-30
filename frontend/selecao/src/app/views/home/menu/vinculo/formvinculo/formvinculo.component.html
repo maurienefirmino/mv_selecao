@@ -1,15 +1,22 @@
 <app-header></app-header>
 
-<form [formGroup]="vinculoForm">
-    <mat-form-field>
-        <mat-label>Profissional</mat-label>
-        <input matInput formControlName="id_profissional" name="nome">
-    </mat-form-field>
-    <mat-form-field>
-        <mat-label>Estabelecimento</mat-label>
-        <input matInput formControlName="id_estabelecimento" name="endereco">
-    </mat-form-field>
-</form>
-
-<a href="/vinculo"><button mat-button>Voltar</button></a>
-<button mat-button (click)="storeVinculo()">Salvar</button>
+<mat-grid-list cols="1" rowHeight="4:1">
+    <mat-grid-tile>
+        <form [formGroup]="vinculoForm">
+            <br><br>
+            <h3>Formulário de Vínculo</h3>
+            <mat-form-field>
+                <mat-label>Profissional</mat-label>
+                <input matInput formControlName="id_profissional" name="nome">
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <mat-label>Estabelecimento</mat-label>
+                <input matInput formControlName="id_estabelecimento" name="endereco">
+            </mat-form-field>
+            <br>
+            <a href="/vinculo"><button mat-raised-button color="warn" type="button">Voltar</button></a>
+            <button mat-raised-button color="primary" (click)="storeVinculo()">Salvar</button>
+        </form>
+    </mat-grid-tile>
+</mat-grid-list>

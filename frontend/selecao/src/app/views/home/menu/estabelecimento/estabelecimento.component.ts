@@ -26,6 +26,12 @@ export class EstabelecimentoComponent implements OnInit {
     })
   }
 
+  delete(id:number){
+    this.estabelecimentoService.delete(id).subscribe( data => {
+      this.getData();
+    })
+  }
+
    displayedColumns: string[] = ['name','endereco','telefone','opcoes'];
 
 }

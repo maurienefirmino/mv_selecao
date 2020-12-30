@@ -25,6 +25,12 @@ export class ProfissionalComponent implements OnInit {
     })
   }
 
+  delete(id:number){
+    this.profissionalService.delete(id).subscribe( data => {
+      this.getData();
+    })
+  }
+
    displayedColumns: string[] = ['name','endereco','telefone','funcao','opcoes'];
 
 

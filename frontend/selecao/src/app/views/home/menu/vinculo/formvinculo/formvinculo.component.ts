@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { VinculoService } from 'src/app/shared/service/vinculo.service';
 
 @Component({
@@ -13,7 +14,8 @@ export class FormvinculoComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private vinculosService: VinculoService
+    private vinculosService: VinculoService,
+    private route:Router
   ) { }
 
   ngOnInit(): void {
@@ -24,7 +26,9 @@ export class FormvinculoComponent implements OnInit {
   }
 
   storeVinculo(){
-    this.vinculosService.postData(this.vinculoForm.value).subscribe(result=>{});
+    this.vinculosService.postData(this.vinculoForm.value).subscribe(result=>{
+      this.route.navigate(['/vinculo']);
+    });
   }
 
 }

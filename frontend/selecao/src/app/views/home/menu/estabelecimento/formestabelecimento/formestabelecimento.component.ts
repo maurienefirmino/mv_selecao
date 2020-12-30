@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { EstabelecimentoService } from 'src/app/shared/service/Estabelecimento.service';
 
 @Component({
@@ -13,7 +14,8 @@ export class FormestabelecimentoComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private estabelecimentoService: EstabelecimentoService
+    private estabelecimentoService: EstabelecimentoService,
+    private route:Router
   ) { }
 
   ngOnInit(): void {
@@ -25,7 +27,9 @@ export class FormestabelecimentoComponent implements OnInit {
   }
 
   storeEstabelecimento(){
-    this.estabelecimentoService.postData(this.estabelecimentoForm.value).subscribe(result=>{});
+    this.estabelecimentoService.postData(this.estabelecimentoForm.value).subscribe(result=>{
+      this.route.navigate(['/estabelecimento']);
+    });
   }
 
 }

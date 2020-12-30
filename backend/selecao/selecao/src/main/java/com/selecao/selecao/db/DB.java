@@ -32,5 +32,6 @@ public class DB {
 		adapter.setPrepareConnection(true);
 		return adapter;
 	}
+	
 
 }

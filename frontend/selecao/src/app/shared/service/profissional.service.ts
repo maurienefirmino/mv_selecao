@@ -33,10 +33,10 @@ export class ProfissionalService {
   }
 
   public update(id: number, profissional: Profissional): Observable<Object>{
-    return this.httpClient.put(this.apiUrl, profissional);
+    return this.httpClient.put(this.apiUrl+"/"+id+"/update", profissional);
   }
 
   public delete(id:number){
-    return this.httpClient.delete(this.apiUrl);
+    return this.httpClient.delete(this.apiUrl+"/"+id+"/delete");
   }
 }

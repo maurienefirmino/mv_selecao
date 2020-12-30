@@ -27,6 +27,12 @@ export class VinculoComponent implements OnInit {
     })
   }
 
+  delete(id:number){
+    this.vinculoService.delete(id).subscribe( data => {
+      this.getData();
+    })
+  }
+
    displayedColumns: string[] = ['id_profissional','id_estabelecimento','opcoes'];
 
 

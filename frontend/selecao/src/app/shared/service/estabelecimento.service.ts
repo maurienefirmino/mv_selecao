@@ -27,4 +27,16 @@ export class EstabelecimentoService {
   public postData(estabelecimento:any): Observable<Estabelecimento>{
     return this.httpClient.post<any>(this.apiUrl, estabelecimento, this.HttpOptions);
   }
+
+  public getById(id: number){
+    return this.httpClient.get<Estabelecimento>(this.apiUrl+"/"+id+"/estabelecimento");
+  }
+
+  public update(id: number, estabelecimento: Estabelecimento): Observable<Object>{
+    return this.httpClient.put(this.apiUrl+"/"+id+"/update", estabelecimento);
+  }
+
+  public delete(id:number){
+    return this.httpClient.delete(this.apiUrl+"/"+id+"/delete");
+  }
 }

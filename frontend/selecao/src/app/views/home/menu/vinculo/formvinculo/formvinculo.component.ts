@@ -29,8 +29,8 @@ export class FormvinculoComponent implements OnInit {
 
   ngOnInit(): void {
     this.vinculoForm = this.fb.group({
-      id_estabelecimento:['',Validators.required],
-      id_profissional:['',Validators.required]
+      estabelecimento:['',Validators.required],
+      profissional:['',Validators.required]
     })
 
     this.profissionalService.getData().subscribe(data=>{

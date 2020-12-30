@@ -21,9 +21,7 @@ export class VinculoComponent implements OnInit {
 
   getData(){
     this.vinculoService.getData().subscribe(data=>{
-      if(data){
-        this.dataSource = data;
-      }
+      this.dataSource = data;
     })
   }
 

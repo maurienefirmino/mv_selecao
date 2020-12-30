@@ -8,8 +8,8 @@
             <br>
                 <mat-form-field appearance="fill">
                 <mat-label>Profissional</mat-label>
-                <mat-select formControlName="id_profissional" name="id_profissional">
-                    <mat-option *ngFor="let i of profissionais" [value]="i.id">
+                <mat-select formControlName="profissional" name="profissional">
+                    <mat-option *ngFor="let i of profissionais" [value]="i.nome">
                         {{i.nome}}
                       </mat-option>
                 </mat-select>
@@ -17,8 +17,8 @@
             <br>
             <mat-form-field appearance="fill">
                 <mat-label>Estabelecimento</mat-label>
-                <mat-select formControlName="id_estabelecimento" name="id_estabelecimento">
-                    <mat-option *ngFor="let i of estabelecimentos" [value]="i.id">
+                <mat-select formControlName="estabelecimento" name="estabelecimento">
+                    <mat-option *ngFor="let i of estabelecimentos" [value]="i.nome">
                         {{i.nome}}
                       </mat-option>
                 </mat-select>

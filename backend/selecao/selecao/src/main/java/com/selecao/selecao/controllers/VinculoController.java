@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.selecao.selecao.models.Estabelecimento;
 import com.selecao.selecao.models.Vinculo;
 import com.selecao.selecao.repositories.VinculoRepository;
 

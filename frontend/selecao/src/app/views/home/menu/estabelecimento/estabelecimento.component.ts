@@ -20,7 +20,9 @@ export class EstabelecimentoComponent implements OnInit {
 
   getData(){
     this.estabelecimentoService.getData().subscribe(data=>{
-      this.dataSource = data;
+      if(data){
+        this.dataSource = data;
+      }
     })
   }
 

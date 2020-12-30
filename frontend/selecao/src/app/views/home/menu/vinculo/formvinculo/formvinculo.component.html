@@ -1,1 +1,15 @@
-<p>formvinculo works!</p>
+<app-header></app-header>
+
+<form [formGroup]="vinculoForm">
+    <mat-form-field>
+        <mat-label>Profissional</mat-label>
+        <input matInput formControlName="id_profissional" name="nome">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Estabelecimento</mat-label>
+        <input matInput formControlName="id_estabelecimento" name="endereco">
+    </mat-form-field>
+</form>
+
+<a href="/vinculo"><button mat-button>Voltar</button></a>
+<button mat-button (click)="storeVinculo()">Salvar</button>

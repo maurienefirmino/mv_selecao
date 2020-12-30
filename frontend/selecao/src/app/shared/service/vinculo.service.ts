@@ -20,8 +20,8 @@ export class VinculoService {
     private httpClient: HttpClient
   ) { }
 
-  public getData(): Observable<Vinculo>{
-      return this.httpClient.get<Vinculo>(this.apiUrl)
+  public getData(): Observable<Vinculo[]>{
+      return this.httpClient.get<Vinculo[]>(this.apiUrl)
   }
 
   public postData(vinculo:any): Observable<Vinculo>{

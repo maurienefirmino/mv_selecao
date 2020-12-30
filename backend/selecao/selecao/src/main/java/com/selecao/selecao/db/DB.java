@@ -16,7 +16,7 @@ public class DB {
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-		dataSource.setUrl("jdbc:mysql://localhost:3306/mv_selecao");
+		dataSource.setUrl("jdbc:mysql://localhost:3306/banco2");
 		dataSource.setUsername("root");
 		dataSource.setPassword("");
 		return dataSource;

@@ -21,7 +21,7 @@ export class ProfissionalComponent implements OnInit {
 
   getData(){
     this.profissionalService.getData().subscribe(data=>{
-      this.dataSource = data;
+        this.dataSource = data;
     })
   }
 

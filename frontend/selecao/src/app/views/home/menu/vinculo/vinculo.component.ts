@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Vinculo } from 'src/app/shared/model/Vinculo.model';
-import { VinculoService } from 'src/app/shared/service/Vinculo.service';
+import { VinculoService } from 'src/app/shared/service/vinculo.service';
 
 @Component({
   selector: 'app-vinculo',
@@ -21,7 +21,9 @@ export class VinculoComponent implements OnInit {
 
   getData(){
     this.vinculoService.getData().subscribe(data=>{
-      this.dataSource = data;
+      if(data){
+        this.dataSource = data;
+      }
     })
   }
 

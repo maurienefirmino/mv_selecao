@@ -20,8 +20,8 @@ export class EstabelecimentoService {
     private httpClient: HttpClient
   ) { }
 
-  public getData(): Observable<Estabelecimento>{
-      return this.httpClient.get<Estabelecimento>(this.apiUrl)
+  public getData(): Observable<Estabelecimento[]>{
+      return this.httpClient.get<Estabelecimento[]>(this.apiUrl)
   }
 
   public postData(estabelecimento:any): Observable<Estabelecimento>{

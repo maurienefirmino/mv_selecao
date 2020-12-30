@@ -5,15 +5,24 @@
         <form [formGroup]="vinculoForm">
             <br><br>
             <h3>Formulário de Vínculo</h3>
-            <mat-form-field>
-                <mat-label>Profissional</mat-label>
-                <input matInput formControlName="id_profissional" name="nome">
-            </mat-form-field>
             <br>
-            <mat-form-field>
+                <mat-form-field appearance="fill">
+                <mat-label>Profissional</mat-label>
+                <mat-select formControlName="id_profissional" name="id_profissional">
+                    <mat-option *ngFor="let i of profissionais" [value]="i.id">
+                        {{i.nome}}
+                      </mat-option>
+                </mat-select>
+                </mat-form-field>
+            <br>
+            <mat-form-field appearance="fill">
                 <mat-label>Estabelecimento</mat-label>
-                <input matInput formControlName="id_estabelecimento" name="endereco">
-            </mat-form-field>
+                <mat-select formControlName="id_estabelecimento" name="id_estabelecimento">
+                    <mat-option *ngFor="let i of estabelecimentos" [value]="i.id">
+                        {{i.nome}}
+                      </mat-option>
+                </mat-select>
+                </mat-form-field>
             <br>
             <a href="/vinculo"><button mat-raised-button color="warn" type="button">Voltar</button></a>
             <button mat-raised-button color="primary" (click)="storeVinculo()">Salvar</button>

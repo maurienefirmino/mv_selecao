@@ -15,7 +15,6 @@ import { EstabelecimentoComponent } from './views/home/menu/estabelecimento/esta
 import { VinculoComponent } from './views/home/menu/vinculo/vinculo.component';
 import { MatTableModule } from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
-import { EditvinculoComponent } from './views/home/menu/vinculo/editvinculo/editvinculo.component';
 import { FormvinculoComponent } from './views/home/menu/vinculo/formvinculo/formvinculo.component';
 import { FormprofissionalComponent } from './views/home/menu/profissional/formprofissional/formprofissional.component';
 import { EditprofissionalComponent } from './views/home/menu/profissional/editprofissional/editprofissional.component';
@@ -35,7 +34,6 @@ import { MatGridListModule } from '@angular/material/grid-list';
     ProfissionalComponent,
     EstabelecimentoComponent,
     VinculoComponent,
-    EditvinculoComponent,
     FormvinculoComponent,
     FormprofissionalComponent,
     EditprofissionalComponent,

@@ -3,6 +3,7 @@ package com.selecao.selecao.controllers;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.selecao.selecao.models.Estabelecimento;
 import com.selecao.selecao.models.Vinculo;
 import com.selecao.selecao.repositories.VinculoRepository;
 
@@ -36,6 +38,12 @@ public class VinculoController {
 	@ResponseStatus(HttpStatus.CREATED)
 	public Vinculo store(@RequestBody Vinculo vinculo) {
 		return vinculoRepository.save(vinculo);
+	}
+	
+	/* Achando um vinculo pelo ID */
+	@RequestMapping("/{id}/vinculo")
+	public Optional<Vinculo> find(@PathVariable("id") Long id) {
+		return vinculoRepository.findById(id);
 	}
 	
 	

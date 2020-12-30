@@ -24,9 +24,14 @@ export class VinculoService {
       return this.httpClient.get<Vinculo[]>(this.apiUrl)
   }
 
+  public getById(id: number){
+    return this.httpClient.get<Vinculo>(this.apiUrl+"/"+id+"/vinculo");
+  }
+
   public postData(vinculo:any): Observable<Vinculo>{
     return this.httpClient.post<any>(this.apiUrl, vinculo, this.HttpOptions);
   }
+  
 
   public delete(id:number){
     return this.httpClient.delete(this.apiUrl+"/"+id+"/delete");

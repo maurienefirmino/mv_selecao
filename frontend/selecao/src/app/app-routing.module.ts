@@ -7,7 +7,6 @@ import { FormestabelecimentoComponent } from './views/home/menu/estabelecimento/
 import { EditprofissionalComponent } from './views/home/menu/profissional/editprofissional/editprofissional.component';
 import { FormprofissionalComponent } from './views/home/menu/profissional/formprofissional/formprofissional.component';
 import { ProfissionalComponent } from './views/home/menu/profissional/profissional.component';
-import { EditvinculoComponent } from './views/home/menu/vinculo/editvinculo/editvinculo.component';
 import { FormvinculoComponent } from './views/home/menu/vinculo/formvinculo/formvinculo.component';
 import { VinculoComponent } from './views/home/menu/vinculo/vinculo.component';
 
@@ -20,9 +19,7 @@ const routes: Routes = [
   { path:'estabelecimento/form',component: FormestabelecimentoComponent },
   { path:'estabelecimento/edit/:id',component: EditestabelecimentoComponent },
   { path:'vinculo',component: VinculoComponent },
-  { path:'vinculo/form',component: FormvinculoComponent },
-  { path:'vinculo/edit/:id',component: EditvinculoComponent }
-
+  { path:'vinculo/form',component: FormvinculoComponent }
 ];
 
 @NgModule({

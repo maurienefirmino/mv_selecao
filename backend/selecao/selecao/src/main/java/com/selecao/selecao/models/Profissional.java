@@ -17,7 +17,7 @@ public class Profissional {
 	private String endereco;
 	private String telefone_celular;
 	private String telefone_residencial;
-	private int funcao;
+	private String funcao;
 
 	
 	public Long getId() {
@@ -50,12 +50,13 @@ public class Profissional {
 	public void setTelefone_residencial(String telefone_residencial) {
 		this.telefone_residencial = telefone_residencial;
 	}
-	public int getFuncao() {
+	public String getFuncao() {
 		return funcao;
 	}
-	public void setFuncao(int funcao) {
+	public void setFuncao(String funcao) {
 		this.funcao = funcao;
 	}
+	
 	
 	
 

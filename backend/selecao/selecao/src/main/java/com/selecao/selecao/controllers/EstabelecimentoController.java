@@ -31,8 +31,8 @@ public class EstabelecimentoController {
 	
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
-	public Estabelecimento store(@RequestBody Estabelecimento profissional) {
-		return estabelecimentoRepository.save(profissional);
+	public Estabelecimento store(@RequestBody Estabelecimento estabelecimento) {
+		return estabelecimentoRepository.save(estabelecimento);
 	}
 	
 	

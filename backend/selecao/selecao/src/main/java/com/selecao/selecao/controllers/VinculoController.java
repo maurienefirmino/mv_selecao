@@ -28,8 +28,8 @@ public class VinculoController {
 	
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
-	public Vinculo store(@RequestBody Vinculo profissional) {
-		return vinculoRepository.save(profissional);
+	public Vinculo store(@RequestBody Vinculo vinculo) {
+		return vinculoRepository.save(vinculo);
 	}
 	
 	/* Deletando um profissional pelo id */
